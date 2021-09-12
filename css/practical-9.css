@@ -1,0 +1,373 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 90px;
+}
+
+#container {
+    width: 100%;
+}
+
+.heading {
+    font-size: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    width: 100%;
+    height: 90px;
+    padding: 0px 20px;
+    background-color: crimson;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#logo {
+    float: left;
+    line-height: 90px;
+    color: white;
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+#header #nav {
+    list-style: none;
+    float: right;
+}
+
+#nav li {
+    display: inline-block;
+    line-height: 90px;
+}
+
+#nav li a {
+    padding: 0px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a i {
+    margin-right: 10px;
+}
+
+#nav li a:hover,
+#show-btn:hover,
+#hide-btn:hover {
+    color: black;
+}
+
+#show-btn,
+#hide-btn {
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+
+#show-btn {
+    position: relative;
+    top: 30px;
+    right: 10px;
+    float: right;
+}
+
+#chk {
+    display: none;
+}
+
+#content {
+    padding: 0px 15px;
+    margin-top: 105px;
+}
+
+#banner {
+    margin-top: 40px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+}
+
+#banner h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+#section1 {
+    margin-top: 30px;
+    
+}
+
+#circle_container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.members {
+    margin: 20px 30px;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#section2 {
+    margin-top: 30px;
+}
+
+#section2::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#left {
+    width: 50%;
+    float: left;
+    background-color: darkblue;
+    height: 380px;
+    color: white;
+    margin-top: 20px;
+    padding: 0px 10px;
+    overflow: auto;
+}
+
+#left h3 {
+    margin-top: 10px;
+}
+
+#left p {
+    font-size: large;
+    margin: 20px 0px;
+    text-align: justify;
+}
+
+#right {
+    float: right;
+    width: 48%;
+    margin-top: 20px;
+    height: 380px;
+}
+
+.article {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#article1 {
+    background-image: url(../images/project-1.jpg);
+    background-size: cover;
+}
+
+#article2 {
+    background-image: url(../images/project-2.jpg);
+    background-size: cover;
+}
+
+#article3 {
+    background-image: url(../images/project-3.jpg);
+    background-size: cover;
+}
+
+#section3 {
+    margin-top: 30px;
+}
+
+#box_container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    background-color: lightgrey;
+    width: 250px;
+    height: 470px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+    margin: 20px 30px;
+    overflow: auto;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 10px 0px;
+    font-weight: bolder;
+}
+
+.card p {
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.card a {
+    display: block;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+.card a:hover {
+    background-color: blue;
+}
+
+#section4 {
+    margin-top: 30px;
+    padding: 0 15px;
+}
+
+#footer {
+    width: 100%;
+    background-color: purple;
+    color: white;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: larger;
+    text-align: center;
+}
+
+#footer a {
+    color: orange;
+}
+
+#footer a:hover {
+    color: dodgerblue;
+}
+
+/* 1. First Break-point */
+/* 800 px -1199px */
+
+@media(max-width: 930px) {
+    html {
+        scroll-padding: 330px;
+    }
+    #show-btn,
+    #hide-btn {
+        display: block;
+    }
+    #nav {
+        display: block;
+        position: fixed;
+        background-color: crimson;
+        right: -100%;
+        width: 100%;
+        height: 330px;
+        text-align: center;
+        transition: .4s;
+        padding-top: 30px;
+    }
+    #chk:checked~#nav {
+        right: 0;
+    }
+    #nav li {
+        line-height: 60px;
+        display: block;
+        margin: 0px;
+    }
+    #nav li a {
+        display: block;
+        width: 100%;
+    }
+    #nav li a:hover {
+        background-color: black;
+        color: white;
+    }
+    #hide-btn {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        font-size: 30px;
+    }
+}
+
+/* 2. Second Break-point */
+
+@media(max-width: 740px) {
+    #left {
+        width: 100%;
+    }
+    #right {
+        width: 100%;
+    }
+    .card {
+        width: 300px;
+        height: 420px;
+    }
+    .article {
+        height: 160px;
+    }
+    #section2 {
+        margin-bottom: 160px;
+    }
+}
+
+/* 3. Third Break-point */
+
+@media(max-width: 450px) {
+    #content,
+    #section4 {
+        min-width: 400px;
+    }
+    #banner h1 {
+        font-size: 30px;
+    }
+    .circle {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+    }
+    .card {
+        width: 100%;
+    }
+}
